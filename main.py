@@ -23,7 +23,7 @@ def send_image(message):
 def send_user(message):
     users = os.listdir('users_images')
     if users:
-        user = choice(users_images)
+        user = choice(users)
         bot.send_photo(message.chat.id, open(os.path.join('users_images', user), 'rb'))
     else:
         bot.send_message(message.chat.id,"Пользователи не отправили картинки")
